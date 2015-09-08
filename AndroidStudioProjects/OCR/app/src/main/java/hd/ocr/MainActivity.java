@@ -200,11 +200,11 @@ public class MainActivity extends Activity {
                             + "Phoenix" + File.separator + "default";
                     f.delete();
                     OutputStream outFile = null;
-                    File file = new File(path, String.valueOf(System.currentTimeMillis()) + ".jpg");
+                    File file = new File(path, String.valueOf(System.currentTimeMillis()) + ".png");
                     try {
                         outFile = new FileOutputStream(file);
 
-                        bitmap.compress(Bitmap.CompressFormat.JPEG, 85, outFile);
+                        bitmap.compress(Bitmap.CompressFormat.PNG, 85, outFile);
                         outFile.flush();
                         outFile.close();
                         Bitmap resized = Bitmap.createScaledBitmap(bitmap, 500, 500, true);
